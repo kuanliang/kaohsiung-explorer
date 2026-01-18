@@ -440,6 +440,7 @@ const missionsData = {
 };
 
 const avatarOptions = ['🧒', '👦', '👧', '🧒🏻', '👦🏻', '👧🏻', '🐻', '🦊', '🐰', '🐼', '🦁', '🐯'];
+const PHOTO_UPLOAD_LIMIT_MB = 10;
 
 // 照片上傳元件 - 新增拍照任務顯示
 const PhotoUploader = ({ mission, photos, onUpload, onDelete }) => {
@@ -455,8 +456,8 @@ const PhotoUploader = ({ mission, photos, onUpload, onDelete }) => {
       return;
     }
 
-    if (file.size > 2 * 1024 * 1024) {
-      alert('圖片太大了！請選擇小於 2MB 的圖片。');
+    if (file.size > PHOTO_UPLOAD_LIMIT_MB * 1024 * 1024) {
+      alert(`圖片太大了！請選擇小於 ${PHOTO_UPLOAD_LIMIT_MB}MB 的圖片。`);
       return;
     }
 
