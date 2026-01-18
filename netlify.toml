@@ -1,0 +1,44 @@
+# Netlify 配置檔
+# 高雄探險家 - Kaohsiung Explorer
+
+[build]
+  # 建置指令
+  command = "npm run build"
+  # 發布目錄
+  publish = "build"
+
+# 單頁應用程式重定向設定
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 環境變數（如需要可在 Netlify 後台設定）
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+# 標頭設定
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# 快取設定
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
