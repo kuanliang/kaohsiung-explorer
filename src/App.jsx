@@ -44,7 +44,7 @@ const Storage = {
 
 // 任務資料
 const areasData = [
-  { id: 'metropolitan', name: '高雄都會公園', icon: '🌳', color: '#22c55e', colorDark: '#16a34a', description: '探索自然生態的綠色寶庫', location: '楠梓區', totalMissions: 5 },
+  { id: 'metropolitan', name: '高雄都會公園', icon: '🌳', color: '#22c55e', colorDark: '#16a34a', description: '探索自然生態的綠色寶庫', location: '楠梓區', totalMissions: 6 },
   { id: 'sugar', name: '橋頭糖廠', icon: '🏭', color: '#f59e0b', colorDark: '#d97706', description: '穿越百年糖業歷史', location: '橋頭區', totalMissions: 5 },
   { id: 'pier2', name: '駁二藝術特區', icon: '🎨', color: '#8b5cf6', colorDark: '#7c3aed', description: '創意與藝術的海港倉庫', location: '鹽埕區', totalMissions: 5 },
   { id: 'ruifeng', name: '瑞豐夜市', icon: '🏮', color: '#ef4444', colorDark: '#dc2626', description: '品嚐道地台灣美食文化', location: '左營區', totalMissions: 5 },
@@ -125,8 +125,23 @@ const missionsData = {
         tips: ['試著擺出有趣的姿勢，讓影子看起來很酷', '可以和朋友一起拍影子合照', '觀察影子的長度和方向'],
         example: '👤 你和你的影子'
       },
-      quiz: { question: '為什麼中午的影子比早上短？', options: ['太陽變小了', '太陽在頭頂正上方', '樹變矮了', '眼睛的錯覺'], correct: 1, explanation: '中午時太陽升到最高點，所以影子最短！' }, 
-      knowledge: { title: '影子與日晷', facts: ['影子的長度和太陽高度有關', '日晷是人類最早的計時工具之一'] } 
+      quiz: { question: '為什麼中午的影子比早上短？', options: ['太陽變小了', '太陽在頭頂正上方', '樹變矮了', '眼睛的錯覺'], correct: 1, explanation: '中午時太陽升到最高點，所以影子最短！' },
+      knowledge: { title: '影子與日晷', facts: ['影子的長度和太陽高度有關', '日晷是人類最早的計時工具之一'] }
+    },
+    {
+      id: 'metro_m6', name: '籃球挑戰', icon: '🏀', type: 'sport', xp: 60, difficulty: 2, time: 25,
+      description: '在籃球場來場鬥牛比賽，挑戰你的籃球技巧！',
+      location: '籃球場',
+      coordinates: { lat: 22.7248, lng: 120.3032 },
+      hints: ['籃球場在公園的運動設施區', '記得帶一顆籃球或向現場的人借用'],
+      photoTask: {
+        title: '📸 拍照任務',
+        mission: '拍一張上籃的動作照片',
+        tips: ['請朋友或家人幫你拍攝上籃的瞬間', '可以拍跳起來投籃的帥氣動作', '連拍模式可以捕捉最佳畫面'],
+        example: '🏀 帥氣上籃的動作照'
+      },
+      quiz: { question: '籃球比賽中「鬥牛」通常是幾對幾？', options: ['5對5', '3對3', '1對1', '2對2'], correct: 2, explanation: '鬥牛通常是指1對1的籃球對決！' },
+      knowledge: { title: '籃球運動', facts: ['籃球由詹姆斯·奈史密斯於1891年發明', '標準籃框高度為3.05公尺', '運動前記得熱身避免受傷'] }
     },
   ],
   sugar: [
